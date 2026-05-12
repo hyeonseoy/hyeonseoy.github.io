@@ -42,6 +42,7 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   left: [
     Component.PageTitle(),
+	Component.Socials(),
     Component.MobileOnly(Component.Spacer()),
     Component.Flex({
       components: [
