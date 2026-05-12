@@ -1,4 +1,4 @@
-import { QuartzComponent, QuartzComponentProps } from "./types"
+import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 
 const Comments: QuartzComponent = (_props: QuartzComponentProps) => {
   return (
@@ -22,5 +22,11 @@ const Comments: QuartzComponent = (_props: QuartzComponentProps) => {
     </div>
   )
 }
+
+Comments.css = `
+.giscus {
+  margin-top: 2rem;
+}
+`
 
 export default (() => Comments) satisfies QuartzComponentConstructor
