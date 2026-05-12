@@ -1,6 +1,6 @@
-import { QuartzComponentConstructor } from "./types"
+import { QuartzComponent, QuartzComponentProps } from "./types"
 
-const Comments: QuartzComponentConstructor = () => {
+const Comments: QuartzComponent = (_props: QuartzComponentProps) => {
   return (
     <div className="giscus">
       <script
@@ -23,4 +23,4 @@ const Comments: QuartzComponentConstructor = () => {
   )
 }
 
-export default Comments
+export default (() => Comments)
