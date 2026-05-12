@@ -1,6 +1,5 @@
 @use "./base.scss";
 
-// put your custom CSS here!
 /* =========================
    LIGHT MODE (Obsidian 느낌)
 ========================= */
@@ -11,8 +10,8 @@
   --gray: #d4d4d4;
   --dark: #2e3440;
 
-  --secondary: #4c78a8;
-  --tertiary: #5e81ac;
+  --secondary: #5e81ac;
+  --tertiary: #81a1c1;
 
   --highlight: #dbeafe;
 }
@@ -61,6 +60,7 @@ a:hover {
 .search {
   background-color: var(--lightgray);
   border: 1px solid var(--gray);
+  border-radius: 10px;
 }
 
 /* code */
@@ -72,13 +72,6 @@ pre {
   background-color: var(--lightgray);
   border: 1px solid var(--gray);
   border-radius: 10px;
-}
-
-/* graph view */
-.graph {
-  background-color: var(--lightgray);
-  border: 1px solid var(--gray);
-  border-radius: 12px;
 }
 
 /* socials */
