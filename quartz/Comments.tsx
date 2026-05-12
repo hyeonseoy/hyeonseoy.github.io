@@ -23,4 +23,4 @@ const Comments: QuartzComponent = (_props: QuartzComponentProps) => {
   )
 }
 
-export default (() => Comments)
+export default (() => Comments) satisfies QuartzComponentConstructor
