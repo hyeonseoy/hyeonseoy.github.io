@@ -37,31 +37,31 @@ export default (() => {
   Socials.css = `
     .social-icons {
       display: flex;
-      gap: 1rem;
-      margin-top: 1rem;
+      gap: 0.8rem;
+      margin-top: 0.8rem;
     }
 
     .social-icons a {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 52px;
-      height: 52px;
-      border-radius: 14px;
-      background: #2a2a2a;
-      color: #8b5cf6;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--lightgray);
+      color: var(--secondary);
       text-decoration: none;
       transition: all 0.2s ease;
     }
 
     .social-icons a:hover {
       transform: translateY(-2px);
-      background: #353535;
+      background: var(--gray);
     }
 
     .social-icons svg {
-      width: 24px;
-      height: 24px;
+      width: 20px;
+      height: 20px;
     }
   `
 
