@@ -37,7 +37,7 @@ export default (() => {
   Socials.css = `
     .social-icons {
       display: flex;
-      gap: 0.8rem;
+      gap: 0.7rem;
       margin-top: 0.8rem;
     }
 
@@ -45,13 +45,16 @@ export default (() => {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
+      width: 38px;
+      height: 38px;
+      min-width: 38px;
+      min-height: 38px;
+      border-radius: 10px;
       background: var(--lightgray);
       color: var(--secondary);
       text-decoration: none;
       transition: all 0.2s ease;
+      padding: 0;
     }
 
     .social-icons a:hover {
@@ -59,9 +62,13 @@ export default (() => {
       background: var(--gray);
     }
 
-    .social-icons svg {
-      width: 20px;
-      height: 20px;
+    .social-icons a svg {
+      width: 18px !important;
+      height: 18px !important;
+      min-width: 18px;
+      min-height: 18px;
+      display: block;
+      flex-shrink: 0;
     }
   `
 
