@@ -6,7 +6,20 @@ export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [
-	Component.Comments(),
+	Component.Comments({
+		provider: "giscus",
+		options: {
+			repo: "hyeonseoy/hyeonseoy.github.io",
+			repoId: "R_kgDOSZeQsA",
+			category: "General",
+			categoryId: "DIC_kwDOSZeQsM4C8yaV",
+			mapping: "pathname",
+			strict: false,
+			reactionsEnabled: true,
+			inputPosition: "bottom",
+			lang: "ko",
+		},
+	}),
   ],
   footer: Component.Footer({
     links: {
