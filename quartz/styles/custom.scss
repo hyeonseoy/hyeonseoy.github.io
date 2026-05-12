@@ -1,15 +1,25 @@
 @use "./base.scss";
 
 // put your custom CSS here!
-:root[saved-theme="light"] {
-  --light: #ffffff;
-  --lightgray: #f6f8fa;
-  --gray: #d0d7de;
-  --dark: #24292f;
+/* =========================
+   LIGHT MODE (Obsidian 느낌)
+========================= */
 
-  --secondary: #0969da;
-  --tertiary: #218bff;
+:root[saved-theme="light"] {
+  --light: #f5f5f5;
+  --lightgray: #ebebeb;
+  --gray: #d4d4d4;
+  --dark: #2e3440;
+
+  --secondary: #4c78a8;
+  --tertiary: #5e81ac;
+
+  --highlight: #dbeafe;
 }
+
+/* =========================
+   DARK MODE (GitHub Dark Modern 느낌)
+========================= */
 
 :root[saved-theme="dark"] {
   --light: #0d1117;
@@ -17,6 +27,73 @@
   --gray: #30363d;
   --dark: #c9d1d9;
 
-  --secondary: #58a6ff;
-  --tertiary: #79c0ff;
+  --secondary: #8b949e;
+  --tertiary: #adbac7;
+
+  --highlight: #1f6feb20;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+
+body {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+/* sidebar */
+.left.sidebar,
+.right.sidebar {
+  background-color: var(--light);
+}
+
+/* links */
+a {
+  color: var(--secondary);
+}
+
+a:hover {
+  color: var(--tertiary);
+}
+
+/* search */
+.search {
+  background-color: var(--lightgray);
+  border: 1px solid var(--gray);
+}
+
+/* code */
+code {
+  background-color: var(--lightgray);
+}
+
+pre {
+  background-color: var(--lightgray);
+  border: 1px solid var(--gray);
+  border-radius: 10px;
+}
+
+/* graph view */
+.graph {
+  background-color: var(--lightgray);
+  border: 1px solid var(--gray);
+  border-radius: 12px;
+}
+
+/* socials */
+.social-icons a {
+  background-color: var(--lightgray);
+  color: var(--secondary);
+}
+
+/* explorer hover */
+.explorer-content a:hover {
+  background-color: var(--lightgray);
+  border-radius: 6px;
+}
+
+/* selection */
+::selection {
+  background: var(--highlight);
 }
