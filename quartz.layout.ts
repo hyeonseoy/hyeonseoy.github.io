@@ -33,9 +33,14 @@ export const sharedPageComponents: SharedLayout = {
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ConditionalRender({
-      component: Component.Breadcrumbs(),
-      condition: (page) => page.fileData.slug !== "index",
-    }),
+        component: Component.RecentNotes({
+                limit: 10,
+                filter: (page) =>
+                        page.fileData.slug !== "index" &&
+                        page.fileData.slug !== "about",
+        }),
+        condition: (page) => page.fileData.slug === "index",
+	}),
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
