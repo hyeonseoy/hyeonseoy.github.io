@@ -6,19 +6,22 @@ export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [
-    Component.Comments({
-      provider: "giscus",
-      options: {
-        repo: "hyeonseoy/hyeonseoy.github.io",
-        repoId: "R_kgDOSZeQsA",
-        category: "General",
-        categoryId: "DIC_kwDOSZeQsM4C8yaV",
-        mapping: "pathname",
-        strict: false,
-        reactionsEnabled: true,
-        inputPosition: "bottom",
-        lang: "ko",
-      },
+    Component.ConditionalRender({
+      component: Component.Comments({
+        provider: "giscus",
+        options: {
+          repo: "hyeonseoy/hyeonseoy.github.io",
+          repoId: "R_kgDOSZeQsA",
+          category: "General",
+          categoryId: "DIC_kwDOSZeQsM4C8yaV",
+          mapping: "pathname",
+          strict: false,
+          reactionsEnabled: true,
+          inputPosition: "bottom",
+          lang: "ko",
+        },
+      }),
+      condition: (page) => page.fileData.slug !== "index",
     }),
   ],
   footer: Component.Footer({
