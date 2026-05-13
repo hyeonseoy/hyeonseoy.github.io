@@ -91,11 +91,11 @@ pre {
   background: var(--highlight);
 }
 
-body[saved-theme="dark"] .recent-notes > ul > li {
+:root[saved-theme="dark"] .recent-notes > ul > li {
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-body[saved-theme="light"] .recent-notes > ul > li {
+:root[saved-theme="light"] .recent-notes > ul > li {
   border-bottom: 1px solid rgba(0,0,0,0.12);
 }
 
