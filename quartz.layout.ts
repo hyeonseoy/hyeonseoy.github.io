@@ -32,12 +32,6 @@ export const sharedPageComponents: SharedLayout = {
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
-    Component.ConditionalRender({
-        component: Component.RecentNotes({
-                limit: 10,
-		}),
-		condition: (page) => page.fileData.slug === "index",
-	}),
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
@@ -45,6 +39,8 @@ export const defaultContentPageLayout: PageLayout = {
 	Component.ConditionalRender({
 		component: Component.RecentNotes({
 			limit: 10,
+			filter: (page) =>
+				page.fileData.slug !== "index"
 		}),
 		condition: (page) => page.fileData.slug === "index",
 	}),
