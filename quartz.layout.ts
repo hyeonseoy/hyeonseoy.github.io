@@ -4,9 +4,7 @@ import * as Component from "./quartz/components"
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
-
   header: [],
-
   afterBody: [
     Component.Comments({
       provider: "giscus",
@@ -23,7 +21,6 @@ export const sharedPageComponents: SharedLayout = {
       },
     }),
   ],
-
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/jackyzha0/quartz",
@@ -36,51 +33,35 @@ export const sharedPageComponents: SharedLayout = {
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ArticleTitle(),
-
     Component.ContentMeta(),
-
     Component.TagList(),
-
     Component.ConditionalRender({
       component: Component.RecentNotes({
         limit: 10,
-
-        filter: (page) =>
-          page.fileData.slug !== "index",
+        filter: (page) => page.slug !== "index",
       }),
-
       condition: (page) => page.fileData.slug === "index",
     }),
   ],
-
   left: [
     Component.PageTitle(),
-
     Component.Socials(),
-
     Component.MobileOnly(Component.Spacer()),
-
     Component.Flex({
       components: [
         {
           Component: Component.Search(),
           grow: true,
         },
-
         { Component: Component.Darkmode() },
-
         { Component: Component.ReaderMode() },
       ],
     }),
-
     Component.Explorer(),
   ],
-
   right: [
     Component.Graph(),
-
     Component.DesktopOnly(Component.TableOfContents()),
-
     Component.Backlinks(),
   ],
 }
@@ -89,30 +70,22 @@ export const defaultContentPageLayout: PageLayout = {
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [
     Component.Breadcrumbs(),
-
     Component.ArticleTitle(),
-
     Component.ContentMeta(),
   ],
-
   left: [
     Component.PageTitle(),
-
     Component.MobileOnly(Component.Spacer()),
-
     Component.Flex({
       components: [
         {
           Component: Component.Search(),
           grow: true,
         },
-
         { Component: Component.Darkmode() },
       ],
     }),
-
     Component.Explorer(),
   ],
-
   right: [],
 }
